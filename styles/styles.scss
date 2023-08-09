@@ -1,0 +1,418 @@
+$primary-color: #3498db;
+$background-color: radial-gradient(
+  circle,
+  rgba(238, 174, 202, 1) 0%,
+  rgba(148, 187, 233, 1) 100%
+);
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: $background-color;
+  
+}
+
+.login-form,
+.register-form {
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  
+ 
+
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 35px #1264c6;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 0px;
+    color: $primary-color;
+    
+  }
+
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 19px 0;
+    border: 3px solid #ccc;
+    border-radius: 30px solid;
+    transition: border-color 0.2s;
+    background: transparent;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  .btn {
+    background: linear-gradient(90deg, #be2edd, #5f27cd);
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 55px;
+
+    border: none;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 2px 2px;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .btn {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+
+    transform: translate(-55%, -55%);
+  }
+
+  .btn:hover {
+    background: linear-gradient(90deg, #d50fff, #44199a);
+  }
+
+  .btn .btn-ripple {
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    border-radius: 100%;
+    animation: ripple 3s;
+    transform: scale(0);
+  }
+
+  @keyframes ripple {
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  .btn1 {
+    background: linear-gradient(90deg, #be2edd, #5f27cd);
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 55px;
+
+    border: none;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 2px 2px;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+  }
+
+  .btn1 {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+
+    transform: translate(-55%, -55%);
+  }
+
+  .btn1:hover {
+    background: linear-gradient(90deg, #d50fff, #44199a);
+  }
+
+  .btn1 .btn1-ripple {
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    border-radius: 100%;
+    animation: ripple 3s;
+    transform: scale(0);
+  }
+
+  @keyframes ripple {
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  .mt-3 {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+
+    a {
+      color: $primary-color;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.mt-3-login {
+  padding-top: 60px;
+  padding-bottom: 0px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+
+  a {
+    color: $primary-color;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+$buttonColors: (#4267b2, #1da1f2, #e1306c, #333, rgb(194, 209, 230));
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.wrapper {
+  .button {
+    display: inline-block;
+    height: 41px;
+    width: 40px;
+
+    margin: 10px;
+    overflow: hidden;
+    
+    background: linear-gradient(90deg, #d281e3, #6f4eb2);
+
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      width: 100px;
+      .icon i {
+        color: #fff;
+      }
+    }
+
+    .icon {
+      display: inline-block;
+      height: 50px;
+      width: 40px;
+      text-align: center;
+      border-radius: 30px;
+      box-sizing: border-box;
+      line-height: 40px;
+      transition: all 0.3s ease-out;
+
+      i {
+        font-size: 27px;
+        line-height: 50px;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    @for $i from 1 through length($buttonColors) {
+      &:nth-child(#{$i}):hover .icon {
+        background: nth($buttonColors, $i);
+      }
+
+      span {
+        font-size: 10px;
+        font-weight: 200;
+        line-height: 30px;
+        padding-bottom: -20px;
+        transition: all 0.8s ease-out;
+        color: nth($buttonColors, $i);
+      }
+    }
+  }
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .popup-content {
+    background: linear-gradient(90deg, #be2edd, #5f27cd);
+    color: #79b8e0;
+
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    animation: fadeInUp 0.5s forwards;
+
+    /* Checkmark Animation */
+    .checkmark {
+      width: 40px;
+      height: 20px;
+      margin: 0 auto;
+      border-radius: 50%;
+      display: inline-block;
+      stroke-width: 2;
+      stroke: #4caf50;
+      stroke-miterlimit: 10;
+
+      .checkmark_circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke: #4caf50;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards,
+          scale 0.3s ease-in-out 0.6s both;
+      }
+
+      .checkmark_stem {
+        transform-origin: 50%;
+        animation: stem 0.3s ease-in-out 0.9s both;
+      }
+
+      .checkmark_kick {
+        transform-origin: 0 100%;
+        animation: kick 0.3s ease-in-out 0.9s both;
+      }
+    }
+  }
+}
+
+/* Keyframe animations */
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes stem {
+  0% {
+    transform: scale(0, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes kick {
+  0% {
+    transform: scale(1, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 10;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 10;
+    transform: translateY(0);
+  }
+}
+
+
+
+.container {
+  position: relative;
+  width: 0px;
+  height: 0px;
+  z-index: -555px;
+
+  .rotating-square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color:#1da0f22d;
+    animation: rotate 3s linear infinite;
+    z-index: -500;
+    left: 200px;
+   
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    
+
+    .item {
+      background:linear-gradient(90deg, #d281e3, #6f4eb2);
+      ;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      cursor: pointer;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.5s ease-in-out;
+
+      &.active {
+        max-height: 1000px; 
+      }
+    }
+  }
+}
